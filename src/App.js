@@ -53,6 +53,13 @@ function App() {
     setStartIndex(-1);
   }
 
+  function back() {
+    setShowSimulator(false);
+    setShowSimulationRow(false);
+    setEnableSimulationBtn(false);
+    setStartIndex(-1);
+  }
+
   return (
     <div className="app-container">
       <section className="section-main">
@@ -75,10 +82,7 @@ function App() {
               ></WaterFlowContainer>
               <BlockContainer blockModel={obstructionData}></BlockContainer>
             </div>
-            <button
-              className="btn-default"
-              onClick={() => setShowSimulator(false)}
-            >
+            <button className="btn-default" onClick={() => back()}>
               Back
             </button>
             {showSimulationRow ? (
